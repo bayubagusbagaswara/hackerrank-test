@@ -1,9 +1,10 @@
 package com.example.demo;
 
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Test10 {
-    private static final Logger log = Logger.getAnonymousLogger();
+    private static final Logger log = LoggerFactory.getLogger(Test10.class);
     public static void main(String[] args) {
 //        int sum = 0;
 //        for (int i=0, j=0; i<5 & j<5; ++i, j = i + 1) {
@@ -28,6 +29,14 @@ public class Test10 {
 
     }
     public synchronized void methodA(int i, String msg) {
+        log.info(Integer.toString(i));
+        log.info(msg);
+    }
 
+    public void methodB(int i, String msg) {
+        synchronized (this) {
+            log.info(Integer.toString(i));
+            log.info(msg);
+        }
     }
 }
