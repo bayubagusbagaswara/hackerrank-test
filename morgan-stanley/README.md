@@ -43,3 +43,54 @@ Sample Output
 Explanation
 The first half, '123', can be converted to '456' in 3 operations.
 Converting it to '465', '546', '654', etc. Would also work, but in all cases, it requires 3 operations
+
+# Soal Office Design
+
+- A company is repainting its office and would like to choose colors that work well together.
+- They are presented with several various priced color options presented in a specific order so that each color complements the surrounding colors.
+- The company has a limited budget and would like to select the greatest number of consecutive colors that fit within this budget.
+- Given the prices of the colors and the company's budget, what is the maximum number of colors that can be purchased for this repainting project?
+
+Example
+```
+prices = [2,3,5,1,1,2,1]
+money = 7
+```
+All subarrays that sum to less than or equal to 7:
+Length 1 subarrays are [2], [3], [5], [1], [1], [2], [1]
+Length 2 - [2, 3], [5,1], [1,1], [1,2], [2,1]
+Length 3 - [5,1,1], [1,1,2], [1,2,1]
+Length 4 - [1,1,2,1]
+
+Function Description
+Complete the function getMaxColors in the editor below.
+
+getMaxColors has the following parameters:
+    int prices[n]: the prices of the various paint colors
+    int money: the amount of money the company can spend on paints
+Returns:
+    int: the maximum number of colors the company can purchase
+
+Sample Input
+3       -> prices[] size n = 3
+10      -> prices = [10, 10, 10]
+10
+10
+5       -> money = 5
+
+Sample Output
+0       -> tidak ada color yang harganya <= 5
+
+Sample Input
+3       -> prices[] size n = 3
+5       -> prices = [5, 10, 10]
+10
+10
+5       -> money = 5
+
+Sample Output
+1       
+
+Explanation
+With the company budget of 5, only 1 color (the first) can be purchased.
+Therefore, the answer is 1.
