@@ -155,9 +155,16 @@ The element arr[0] = 1. Similar elements are at indices 2 and 3.
 The distance metric for arr[0]= |0-2| + |0-3| = 5
 Similar logic follows:
 The distance metric for arr[1] = |1-4| = 3
-The distance metric for arr[2] = |2-0| + |2-3| = 3
+The distance metric for arr[2] = |2-0| + |2-3| = 3 
 The distance metric for arr[3] = |3-0| + |3-2| = 4
 The distance metric for arr[4] = |4-1| = 3
 The distance metric for arr[5] = 0
 Thus, distance metrics = [5,3,3,4,3,0]
 
+
+# Note
+
+- Private and final methods can be overloaded, but they cannot be overridden.
+- Overloading happens at compile time, Overriding happens at runtime
+- RuntimeException -> NullPointerException, IndexOutOfBoundsException, ArrayIndexOutOfBoundsException
+- IOException -> FileNotFoundException
