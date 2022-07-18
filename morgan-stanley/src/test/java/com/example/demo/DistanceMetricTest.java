@@ -10,7 +10,7 @@ public class DistanceMetricTest {
         int n = arr.size();
         Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 0; i<n; i++) {
-            List<Integer> list = new ArrayList<>();
+            List<Integer> list = new ArrayList<>(n);
             list.add(i);
 
             if (map.containsKey(arr.get(i))) {
