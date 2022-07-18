@@ -119,3 +119,24 @@ Function Description
 getSpecialSubstring has the following parameter(s):
 string s: the input string
 int k: the maximum number of normal characters allowed in a substring
+
+
+# Task Queue
+
+- Task queues, which allow for asynchronous performance, are an important part of modern processing architectures.
+- Information about a system consisting of several batch processing queues is given.
+
+Each queue has three parameters:
+1. the maximum number of tasks it can process in a single batch
+2. the time it takes to process a single batch of task in that queue
+3. the number of tasks the queue must process
+
+Given this information, calculate the minimum time needed to process a set of tasks by the system.
+
+Example:
+n = 2
+batchSize = [4,3]
+processingTime = [6,5]
+numTasks = [8,8]
+
+Queue 0 can process a maximum of 4 tasks
